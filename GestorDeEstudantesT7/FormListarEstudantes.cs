@@ -38,5 +38,15 @@ namespace GestorDeEstudantesT7
             // Impede o usuário de incluir linhas.
             dataGridViewListaDeAlunos.AllowUserToAddRows = false;
         }
+
+        private void dataGridViewListaDeAlunos_DoubleClick(object sender, EventArgs e)
+        {
+            //exibir a informação do estudante ao clicar nele
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

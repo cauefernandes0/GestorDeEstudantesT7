@@ -53,5 +53,10 @@ namespace GestorDeEstudantesT7
         {
 
         }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
