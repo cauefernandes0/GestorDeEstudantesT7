@@ -19,6 +19,7 @@ namespace GestorDeEstudantesT7
             // Removido `id` da lista de parâmetros a serem alterados.
             MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nome,@sobrenome,@nascimento,@genero,@telefone,@endereco,@foto)", meuBancoDeDados.getConexao);
 
+            
             comando.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nascimento", MySqlDbType.Date).Value = nascimento;
@@ -54,12 +55,14 @@ namespace GestorDeEstudantesT7
             return tabelaDeDados;
         }
 
-        public bool atualizarEstudante(string nome, string sobrenome, DateTime nascimento,
+        public bool atualizarEstudante(int id, string nome, string sobrenome, DateTime nascimento,
             string telefone, string genero, string endereco, MemoryStream foto)
         {
             // Removido `id` da lista de parâmetros a serem alterados.
             MySqlCommand comando = new MySqlCommand("UPDATE `estudantes` SET `nome`= @nome,`sobrenome`=@sobrenome,`nascimento`=@nascimento,`genero`=@genero,`telefone`=@telefone,`endereco`= @endereco,`foto`= @foto WHERE `id`= @id", meuBancoDeDados.getConexao);
 
+
+            comando.Parameters.Add("@id",MySqlDbType.Int32).Value = id;
             comando.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nascimento", MySqlDbType.Date).Value = nascimento;
