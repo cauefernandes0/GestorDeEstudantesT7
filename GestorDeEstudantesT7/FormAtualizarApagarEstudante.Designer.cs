@@ -304,11 +304,8 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBoxFoto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonFeminino;
         private System.Windows.Forms.RadioButton radioButtonMasculino;
@@ -316,11 +313,14 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxSobrenome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Button buttonBuscar;
+        internal System.Windows.Forms.PictureBox pictureBoxFoto;
+        internal System.Windows.Forms.TextBox textBoxEndereco;
+        internal System.Windows.Forms.TextBox textBoxTelefone;
+        internal System.Windows.Forms.TextBox textBoxSobrenome;
+        internal System.Windows.Forms.TextBox textBoxNome;
+        internal System.Windows.Forms.TextBox textBoxId;
     }
 }
