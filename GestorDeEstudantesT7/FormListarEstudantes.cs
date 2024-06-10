@@ -46,7 +46,8 @@ namespace GestorDeEstudantesT7
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
-
+            //atualiza a lista de estudantes
         }
+        
     }
 }

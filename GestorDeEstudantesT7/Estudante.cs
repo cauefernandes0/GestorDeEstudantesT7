@@ -85,5 +85,10 @@ namespace GestorDeEstudantesT7
                 return false;
             }
         }
+        //Apaga um estudante com base no seu ID
+        public bool apagarEstudante(int id)
+        {
+            MySqlCommand comando
+        }
     }
 }

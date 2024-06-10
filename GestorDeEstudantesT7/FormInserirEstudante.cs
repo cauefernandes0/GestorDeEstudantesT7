@@ -75,9 +75,9 @@ namespace GestorDeEstudantesT7
             int anoDeNascimento = dateTimePickerNascimento.Value.Year;
             int anoAtual = DateTime.Now.Year;
 
-            if ((anoAtual - anoDeNascimento) < 10 || (anoAtual - anoDeNascimento) > 100)
+            if ((anoAtual - anoDeNascimento) < 10 || (anoAtual - anoDeNascimento) > 80)
             {
-                MessageBox.Show("O aluno precisa ter entre 10 e 100 anos.",
+                MessageBox.Show("O aluno precisa ter entre 10 e 80 anos.",
                     "Ano de nascimento inválido",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -104,6 +104,11 @@ namespace GestorDeEstudantesT7
                 MessageBox.Show("Existem campos não preenchidos!", "Campos não preenchidos",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormInserirEstudante_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
