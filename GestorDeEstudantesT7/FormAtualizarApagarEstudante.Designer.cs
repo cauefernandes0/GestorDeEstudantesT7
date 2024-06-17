@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAtualizarApagarEstudante));
-            this.buttonCadastrar = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEnviarFoto = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,15 +55,16 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonCadastrar
+            // buttonSalvar
             // 
-            this.buttonCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrar.Location = new System.Drawing.Point(34, 385);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(90, 41);
-            this.buttonCadastrar.TabIndex = 35;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Location = new System.Drawing.Point(34, 385);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(90, 41);
+            this.buttonSalvar.TabIndex = 35;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
@@ -271,7 +272,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.buttonCadastrar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEnviarFoto);
             this.Controls.Add(this.label7);
@@ -301,7 +302,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCadastrar;
+        private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Label label7;
