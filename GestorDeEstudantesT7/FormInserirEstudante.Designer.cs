@@ -281,7 +281,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSobrenome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonFeminino;
@@ -295,5 +294,6 @@
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonCadastrar;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
     }
 }

@@ -29,5 +29,11 @@ namespace GestorDeEstudantesT7
                 pictureBoxFoto.Image = Image.FromFile(procurarFoto.FileName);
             }
         }
+
+      
+        private void FormAtualizarApagarEstudante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

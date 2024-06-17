@@ -290,6 +290,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Name = "FormAtualizarApagarEstudante";
             this.Text = "FormAtualizarApagarEstudante";
+            this.Load += new System.EventHandler(this.FormAtualizarApagarEstudante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -306,11 +307,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButtonFeminino;
-        private System.Windows.Forms.RadioButton radioButtonMasculino;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -322,5 +319,9 @@
         internal System.Windows.Forms.TextBox textBoxSobrenome;
         internal System.Windows.Forms.TextBox textBoxNome;
         internal System.Windows.Forms.TextBox textBoxId;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
+        internal System.Windows.Forms.RadioButton radioButtonFeminino;
+        internal System.Windows.Forms.RadioButton radioButtonMasculino;
+        internal System.Windows.Forms.GroupBox groupBox1;
     }
 }
