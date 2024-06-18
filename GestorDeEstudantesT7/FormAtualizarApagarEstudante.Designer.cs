@@ -51,6 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,9 +70,9 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(187, 385);
+            this.buttonCancelar.Location = new System.Drawing.Point(154, 385);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(90, 41);
+            this.buttonCancelar.Size = new System.Drawing.Size(98, 41);
             this.buttonCancelar.TabIndex = 34;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -264,11 +265,23 @@
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
             // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonApagar.Location = new System.Drawing.Point(286, 385);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(90, 41);
+            this.buttonApagar.TabIndex = 39;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
             // FormAtualizarApagarEstudante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
+            this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.label8);
@@ -301,8 +314,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Label label7;
@@ -324,5 +335,7 @@
         internal System.Windows.Forms.RadioButton radioButtonFeminino;
         internal System.Windows.Forms.RadioButton radioButtonMasculino;
         internal System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.Button buttonApagar;
+        internal System.Windows.Forms.Button buttonSalvar;
     }
 }

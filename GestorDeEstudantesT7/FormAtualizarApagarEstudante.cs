@@ -18,6 +18,9 @@ namespace GestorDeEstudantesT7
             InitializeComponent();
         }
 
+        //Variável global do tipo Estudante
+        Estudante estudante = new Estudante();
+
         private void buttonEnviarFoto_Click(object sender, EventArgs e)
         {
             // Abre janela para pesquisar a imagem no computador.
@@ -56,7 +59,7 @@ namespace GestorDeEstudantesT7
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            Estudante estudante = new Estudante();
+            
 
 
             //Linha exclusiva do botão salvar
@@ -107,6 +110,37 @@ namespace GestorDeEstudantesT7
             {
                 MessageBox.Show("Existem campos não preenchidos!", "Campos não preenchidos",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            //Referência a ID do aluno
+            int idDoAluno = Convert.ToInt32(textBoxId.Text);
+
+
+            //Mostrar uma ciaxa de diálogo perguntando se o usuário tem certeza se quer apagar o aluno
+            if(MessageBox.Show("Tem certeza que deseja apagar o aluno?", "Apagar Estudante",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (estudante.apagarEstudante(idDoAluno))
+                {
+                    MessageBox.Show("Aluno apagado!", "Apagar Estudante", MessageBoxButtons.OK, MessageBoxIcon.Information );
+
+                    //Limpar as caixas do texto
+                    textBoxId.Text = "";
+                    textBoxNome.Text = "";
+                    textBoxSobrenome.Text = string.Empty;
+                    textBoxTelefone.Text = string.Empty;
+                    textBoxEndereco.Text = string.Empty;
+                    dateTimePickerNascimento.Text = string.Empty;
+                    pictureBoxFoto.Text = string.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não apagado", "Apagar Estudante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
         }
     }
