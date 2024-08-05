@@ -143,5 +143,10 @@ namespace GestorDeEstudantesT7
 
             }
         }
+
+        private void pictureBoxFoto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
