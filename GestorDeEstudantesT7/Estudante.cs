@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GestorDeEstudantesT7
 {
@@ -19,7 +21,6 @@ namespace GestorDeEstudantesT7
             // Removido `id` da lista de parâmetros a serem alterados.
             MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nome,@sobrenome,@nascimento,@genero,@telefone,@endereco,@foto)", meuBancoDeDados.getConexao);
 
-            
             comando.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nascimento", MySqlDbType.Date).Value = nascimento;
@@ -55,14 +56,13 @@ namespace GestorDeEstudantesT7
             return tabelaDeDados;
         }
 
-        public bool atualizarEstudante(int id, string nome, string sobrenome, DateTime nascimento,
+        public bool atualizarEstudantes(int id, string nome, string sobrenome, DateTime nascimento,
             string telefone, string genero, string endereco, MemoryStream foto)
         {
             // Removido `id` da lista de parâmetros a serem alterados.
-            MySqlCommand comando = new MySqlCommand("UPDATE `estudantes` SET `nome`= @nome,`sobrenome`=@sobrenome,`nascimento`=@nascimento,`genero`=@genero,`telefone`=@telefone,`endereco`= @endereco,`foto`= @foto WHERE `id`= @id", meuBancoDeDados.getConexao);
+            MySqlCommand comando = new MySqlCommand("UPDATE `estudantes` SET `nome`=@nome,`sobrenome`=@sobrenome,`nascimento`=@nascimento,`genero`=@genero,`telefone`=@telefone,`endereco`=@endereco,`foto`=@foto WHERE `id`=@id", meuBancoDeDados.getConexao);
 
-
-            comando.Parameters.Add("@id",MySqlDbType.Int32).Value = id;
+            comando.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             comando.Parameters.Add("@nome", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sobrenome", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nascimento", MySqlDbType.Date).Value = nascimento;
@@ -85,25 +85,34 @@ namespace GestorDeEstudantesT7
                 return false;
             }
         }
-        //Apaga um estudante com base no seu ID
+
+        // Apaga um estudante com base em seu ID.
         public bool apagarEstudante(int id)
         {
-            MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes` WHERE `id` = @id");
+            try
+            {
 
-            comando.Parameters.Add("id", MySqlDbType.Int32).Value = id;
+            } catch
+            {
+
+            }
+            MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes` WHERE `id`=@id");
+        
+            comando.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
 
             meuBancoDeDados.abrirConexao();
-            if (comando.ExecuteNonQuery()== 1)
+
+            if (comando.ExecuteNonQuery() == 1)
             {
                 meuBancoDeDados.fecharConexao();
-                return true ;
+                return true;
             }
             else
             {
                 meuBancoDeDados.fecharConexao();
                 return false;
             }
-            
+
         }
     }
 }

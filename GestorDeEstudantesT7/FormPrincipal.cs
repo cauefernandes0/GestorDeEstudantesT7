@@ -36,12 +36,14 @@ namespace GestorDeEstudantesT7
 
         private void estatísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormEstatisticas formEstatisticas = new FormEstatisticas();
+            formEstatisticas.Show(this);
         }
 
         private void editarRemoverToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAtualizarApagarEstudante atualizarApagarEstudante = new FormAtualizarApagarEstudante();
+            atualizarApagarEstudante.Show(this);
         }
 
         private void gerenciarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,11 +52,6 @@ namespace GestorDeEstudantesT7
         }
 
         private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
         {
 
         }

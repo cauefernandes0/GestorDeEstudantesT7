@@ -58,7 +58,6 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(158, 20);
             this.textBoxNome.TabIndex = 1;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // label2
             // 
@@ -69,7 +68,6 @@
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -80,7 +78,6 @@
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Sobrenome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxSobrenome
             // 
@@ -88,7 +85,6 @@
             this.textBoxSobrenome.Name = "textBoxSobrenome";
             this.textBoxSobrenome.Size = new System.Drawing.Size(158, 20);
             this.textBoxSobrenome.TabIndex = 4;
-            this.textBoxSobrenome.TextChanged += new System.EventHandler(this.textBoxSobrenome_TextChanged);
             // 
             // label3
             // 
@@ -99,7 +95,6 @@
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nascimento";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dateTimePickerNascimento
             // 
@@ -129,7 +124,6 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 49);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButtonFeminino
             // 
@@ -266,7 +260,6 @@
             this.Name = "FormInserirEstudante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Estudante";
-            this.Load += new System.EventHandler(this.FormInserirEstudante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
@@ -281,6 +274,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSobrenome;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonFeminino;
@@ -294,6 +288,5 @@
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonCadastrar;
-        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
     }
 }
