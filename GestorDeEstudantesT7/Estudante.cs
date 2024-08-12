@@ -114,5 +114,31 @@ namespace GestorDeEstudantesT7
             }
 
         }
+        public string fazerContagem(string pesquisa)
+        {
+            MySqlCommand comando = new MySqlCommand(pesquisa, meuBancoDeDados.getConexao);
+
+            meuBancoDeDados.abrirConexao();
+            // a pesquisa
+            string contagem = comando.ExecuteScalar().ToString();
+            meuBancoDeDados.fecharConexao();
+
+            return contagem;
+        }
+
+        public string totalDeEstudantes()
+        {
+            return fazerContagem("SELECT COUNT(+) FROM `estudantes`");
+        }
+
+        public string totalDeEstudantesMeninos()
+        {
+            return fazerContagem("SELECT COUNT(+) FROM `estudantes` WHERE `genero`='Masculino'");
+        }
+
+        public string totalDeEstudantesMeninas()
+        {
+            return fazerContagem("SELECT COUNT(+) FROM `estudantes` WHERE `genero`='Feminino'");
+        }
     }
 }
