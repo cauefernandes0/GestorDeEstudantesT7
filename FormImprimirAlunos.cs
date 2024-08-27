@@ -63,5 +63,40 @@ namespace GestorDeEstudantesT7
             dateTimePickerDataInicial.Enabled = true;
             dateTimePickerDataFinal.Enabled = true;
         }
+
+        private void buttonFiltrar_Click(object sender, EventArgs e)
+        {
+            //Filtra os dados que serão exibidos na tabela
+            MySqlCommand comando;
+            string busca;
+            // verificar se o usuário quer usar um intervalo de datas
+            if (radioButtonSim.Checked == true)
+            {
+                //pega as datas que o usuário selecionou
+                string dataInicial = dateTimePickerDataInicial.Value.ToString("yyyy-MM-dd");
+                string dataFinal = dateTimePickerDataFinal.Value.ToString("yyyy-MM-dd");
+
+                if (radioButtonMasculino.Checked)
+                {
+                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '" +  dataInicial +  "' AND '" + dataFinal + "' AND genero" +
+                        " = 'Masculino'";
+                }
+                else if (radioButtonFeminino.Checked)
+                {
+                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '" + dataInicial + "' AND '" + dataFinal + "' AND genero" +
+                       " = 'Feminino'";
+                }
+                else
+                {
+                    busca = "SELECT * FROM `estudantes` WHERE `nascimento` BETWEEN '" + dataInicial + "' AND '" + dataFinal + "'";
+                }
+
+
+                comando = new MySqlCommand(busca);
+                preencheTabela(comando);
+            }
+
+            
+        }
     }
 }
