@@ -69,6 +69,7 @@
             this.buttonSalvar.TabIndex = 2;
             this.buttonSalvar.Text = "Salvar Em Arquivo de Texto";
             this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // groupBox1
             // 
@@ -82,6 +83,7 @@
             this.groupBox1.Size = new System.Drawing.Size(920, 106);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // buttonFiltrar
             // 

@@ -55,7 +55,7 @@ namespace GestorDeEstudantesT7
         private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormImprimirAlunos formImprimirAlunos = new FormImprimirAlunos();
-            formImprimirAlunos.Show();
+            formImprimirAlunos.Show(this);
         }
     }
 }
